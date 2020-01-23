@@ -1,1 +1,39 @@
 // Navigation Styles here
+nav{
+    .flex(space-between,center);
+    flex-wrap: wrap;
+    padding: 1% 1% 1% 0;
+    border-bottom: 2px dashed @navigation-border;
+
+    .logo{
+        @media @tablet {
+            margin: 0 auto;
+        }
+    }
+
+    ul{
+        .flex(space-between,center);
+        width:45%;
+        flex-wrap: wrap;
+        @media @tablet{
+            width: 100%;
+        }
+        @media @phone{
+            flex-direction: column;
+        }
+        li{
+            @media @phone {
+                padding: 1rem;
+                border-bottom: @navigation-border;
+                width: 100%;
+                text-align: center;
+            }
+            a{
+                font-family: @s-font;
+                font-size: 1.5rem;
+                color: @font-color;
+                text-decoration: none;
+            }           
+        }
+    }
+}
