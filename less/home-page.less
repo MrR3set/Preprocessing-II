@@ -1,13 +1,18 @@
 .home {
 
+  .hero{
+    border-bottom: @navigation-border;
+
+    img{
+      margin-bottom: 3%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
+    justify-content: space-between;    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -21,15 +26,24 @@
         border-radius: 10px;
       }
     }
+
+    @media @phone{
+      .text-content,.img-content,img{
+        width: 100%;
+      }
+    }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
-
+    border-bottom: @navigation-border;
+ 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @phone{
+        order: -2;
+      }
     }
 
     .img-content {
@@ -41,10 +55,17 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @phone{
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      @media @phone{
+        width: 100%;
+      }
     }
+
   }
 
   .content-pick {
@@ -52,10 +73,38 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
+    @media @phone{
+      width: 100%;
+      flex-direction: column;
+    }
+
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @phone{
+        width: 80%;
+        margin-bottom: 50px;
+      }
     }
+
+    .btn{
+      .btn(@white);
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
   }
+
 }// home
